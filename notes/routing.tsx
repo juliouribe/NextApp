@@ -81,7 +81,4 @@ in the respective component folder.
 Create an errors.tsx file to replace the default error page. You cannot catch
 errors from layout however. We can use a global-errors.tsx file to capture errors
 from layout.
-
-APIs
-
 */
