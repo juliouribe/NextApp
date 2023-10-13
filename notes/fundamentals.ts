@@ -93,4 +93,56 @@ When you run 'npm run build' nextjs will create a prod build making static and
 non-static pages. The empty circle is a static page. Lambda is a dynamic page.
 Still server side but updates for every request.
 
+The globals.css file should only contains rules for truly global rules.
+
+CSS Modules
+A CSS file that is scoped to a page or component. Create a file with a
+name.module.css format. Can use these styles so don't use hyphens and do pascalCase
+
+Tailwind CSS
+Classes that control css
+Paddings
+p-[number]
+px-[number] : horizontal padding
+py-[number] : vertical
+pt-[number] : top only
+...
+
+Margins - same thing
+m-[number]
+mx-[number]
+my-[number]
+mt-[number]
+...
+
+Text
+text-xs
+text-sm
+text-base
+text-lg
+text-xl
+text-2xl
+
+Color
+text-[color]
+bg-[color]
+
+Thickness
+font-thin
+font-light
+font-normal
+font-medium
+font-bold
+
+Nice thing about tailwind is that once you delete the component, you don't need
+to remember to delete class selectors from CSS. We also only pack the things we
+use.
+
+DaisyUI
+Is a popular component library for Tailwind. We can use it like we'd use bootstrap
+To install all you need is the following:
+plugins: [require("daisyui")],
+  daisyUI: {
+    themes: ["winter"],
+  }
 */
