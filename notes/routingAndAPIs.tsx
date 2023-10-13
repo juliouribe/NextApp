@@ -40,6 +40,48 @@ users array depending on the value of sortOrder which we have in the props. We
 used a ternary to toggle between sorting by email and name. No desc logic yet.
 
 Layouts
+Did lots of stuff with layouts. Apply a navbar to share across all pages. Made
+an admin folder where I defined another layout specifically for admin pages.
 
+Navigation, More on Link
+Link only downloads the content of the link url. For example going to the users
+page only gets the content of the users page.
+Links prefetches links that are in the viewport.
+Caches pages on the client
+
+Programmatic Navigation
+Submitting a form or clicking on a button are examples of this.
+
+Using the router, make sure you component has 'use client'. Then import the
+router. Its import to note that we import from 'next/navigation'.
+import { useRouter } from 'next/navigation';
+Then call an instance of the router:
+const router = useRouter();
+Use it in a callback
+onClick={() => router.push('/users')}
+
+Loading pages
+You can wrap something in the <Suspense fallback={<p>Loading...</p>}> component
+to tell your page to render something else while the content is rendering.
+You can apply a general loading content for all content in the main layout page
+by wrapping it in a Suspense component. Or you can make a loading.tsx inside of
+app to achieve the same thing in a cleaner way.
+
+Handling Not Found Pages
+We can create a not-found.tsx file at the app level to replace the 404 error
+message with a custom not found page. This applies anytime.
+For a custom not found page for users, you need to import the notFound function
+and then call it to render the not found page in another component that uses a prop.
+import { notFound } from 'next/navigation'
+notFound();
+
+You can do a custom not found page by simply creating another not-found.tsx file
+in the respective component folder.
+
+Create an errors.tsx file to replace the default error page. You cannot catch
+errors from layout however. We can use a global-errors.tsx file to capture errors
+from layout.
+
+APIs
 
 */
