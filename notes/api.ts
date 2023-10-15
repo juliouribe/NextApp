@@ -52,4 +52,7 @@ await prisma.user.update({
     email: 'b'
   }
 }); update a user
+
+Uploading Files
+We'll use Cloudinary to store files.
 */
