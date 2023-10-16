@@ -30,6 +30,7 @@ Use getServerSession(authOptions) to get user info on server side
 const session = await getServerSession(authOptions);
 <h1>Hello {session && <span>{session.user!.name}</span>}</h1>
 
+Database adapters
 
 
 */
