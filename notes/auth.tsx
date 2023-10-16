@@ -31,6 +31,20 @@ const session = await getServerSession(authOptions);
 <h1>Hello {session && <span>{session.user!.name}</span>}</h1>
 
 Database adapters
+Hook up your database to the next auth login process with various providers. Use
+the recommended models and schema so when a user uses a provider, we save a record
+of their signing and create an account in the database for them. The account table
+keeps a record for which provider they used.
 
+We then added a hashed password field and installed bcrypt so we can do custom
+user login. Then we added to the providers array to accept more login types.
+We used bcrypt to compare hashed passwords with a password from the form.
+
+In the API, we made a register folder so we can register with new credentials.
+We only made the backend endpoint and tested it with Postman. Its very similar
+to the ruby on rails validation logic even using bcrypt.
+
+For fun you can create a register page later to serve up a form and do validation
+as users tried to sign up.
 
 */
