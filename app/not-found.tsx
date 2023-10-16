@@ -2,7 +2,7 @@ import React from 'react'
 
 const NotFoundPage = () => {
   return (
-    <div>The requested page does&apos;t exists.</div>
+    <div>The requested page doesn&apos;t exists.</div>
   )
 }
 
